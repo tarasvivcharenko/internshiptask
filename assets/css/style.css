@@ -20,9 +20,9 @@
   .header .header_container .header_menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    width: 75%;
     padding-left: 0;
     margin-bottom: 0; }
     .header .header_container .header_menu .menu_item {
@@ -378,14 +378,14 @@
           top: -20px;
           left: 0;
           height: 305px;
-          width: 370px;
+          width: 100%;
           z-index: 1; }
         .ourClient .slider-content .ourClient_content .ourClient_block_left .ourClient_photo_back {
           position: absolute;
           top: 0;
           left: 20px;
           height: 305px;
-          width: 370px; }
+          width: 100%; }
       .ourClient .slider-content .ourClient_content .ourClient_block_right {
         width: 60.2%;
         display: flex;
@@ -425,3 +425,103 @@
             font-weight: 400;
             line-height: 14px;
             letter-spacing: 0.56px; }
+
+.publication {
+  padding: 100px 0; }
+  .publication .publication_heading {
+    width: 69%;
+    position: relative;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 18px; }
+    .publication .publication_heading .publication_title {
+      color: #111111;
+      font-family: 'Playfair Display';
+      font-size: 31px;
+      line-height: 21px;
+      font-weight: 400;
+      letter-spacing: 1.24px; }
+    .publication .publication_heading .publication_description {
+      padding-top: 29px;
+      color: #666666;
+      font-family: 'Playfair Display';
+      font-size: 21px;
+      line-height: 27px;
+      font-weight: 400;
+      letter-spacing: 0.84px; }
+    .publication .publication_heading .publication_number_back {
+      position: absolute;
+      top: -55px;
+      left: 0;
+      opacity: 0.1;
+      color: #111111;
+      font-family: 'Open Sans';
+      font-size: 195px;
+      line-height: 200px;
+      font-weight: 400;
+      letter-spacing: 0.56px; }
+  .publication .publication_content {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .publication .publication_content .publication_block {
+      width: 31.5%;
+      padding-bottom: 25px;
+      border-bottom: 3px solid #e8bf5d; }
+      .publication .publication_content .publication_block .publication_block_photo {
+        padding-bottom: 30px; }
+        .publication .publication_content .publication_block .publication_block_photo img {
+          width: 100%; }
+      .publication .publication_content .publication_block .publication_block_title {
+        text-decoration: none;
+        color: #111111;
+        font-family: 'Playfair Display';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.84px; }
+      .publication .publication_content .publication_block .publication_block_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .publication .publication_content .publication_block .publication_block_info span, .publication .publication_content .publication_block .publication_block_info .publication_block_info_date {
+          color: #666666;
+          font-family: 'Open Sans';
+          font-style: italic;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.64px; }
+        .publication .publication_content .publication_block .publication_block_info .publication_block_info_author {
+          color: #111111;
+          font-family: 'Open Sans';
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.64px; }
+      .publication .publication_content .publication_block .publication_block_text {
+        padding: 35px 0;
+        color: #666666;
+        font-family: 'Open Sans';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0.56px; }
+      .publication .publication_content .publication_block .publication_block_comment_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .publication .publication_content .publication_block .publication_block_comment_info .publication_block_comment {
+          color: #111111;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 16px;
+          letter-spacing: 0.64px; }
+        .publication .publication_content .publication_block .publication_block_comment_info .publication_block_comment_share {
+          color: #111111;
+          font-family: "Open Sans";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 16px;
+          letter-spacing: 0.64px; }
