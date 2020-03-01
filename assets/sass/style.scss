@@ -95,3 +95,106 @@
     }
   }
 }
+.aboutUs {
+  padding-top: 100px;
+  padding-bottom: 96px;
+  .about_title_description {
+    width: 69%;
+    position: relative;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 18px;
+    .about_title {
+      color: #111111;
+      font-family: 'Playfair Display';
+      font-size: 31px;
+      line-height: 21px;
+      font-weight: 400;
+      letter-spacing: 1.24px;
+    }
+    .about_description {
+      padding-top: 29px;
+      color: #666666;
+      font-family: 'Playfair Display';
+      font-size: 21px;
+      line-height: 27px;
+      font-weight: 400;
+      letter-spacing: 0.84px;
+    }
+    .about_number_back {
+      position: absolute;
+      top: -58px;
+      left: 0;
+      opacity: 0.1;
+      color: #111111;
+      font-family: 'Open Sans';
+      font-size: 195px;
+      line-height: 200px;
+      font-weight: 400;
+      letter-spacing: 0.56px;
+    }
+  }
+  .about_history_expertise{
+    width: 95.6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px;
+    .about_history{
+      width: 51.5%;
+      .history_title{
+        color: #111111;
+        font-family: 'Playfair Display';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.84px;
+      }
+      .history_content{
+        .date_rows{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-top: 32px;
+          .history_date{
+            width: 13.5%;
+            color: #111111;
+            font-family: 'Open Sans';
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0.84px;
+          }
+          .history_text{
+            width: 80.5%;
+            color: #111111;
+            font-family: 'Open Sans';
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0.64px;
+          }
+        }
+      }
+    }
+    .about_expertise{
+      width: 44.9%;
+      .expertise_title{
+        color: #111111;
+        font-family: 'Playfair Display';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.84px;
+      }
+      .expertise_text{
+        padding-top: 36px;
+        color: #666666;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.56px;
+      }
+    }
+  }
+}

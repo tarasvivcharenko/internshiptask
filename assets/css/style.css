@@ -76,3 +76,91 @@
     font-weight: 400;
     line-height: 32px;
     letter-spacing: 0.64px; }
+
+.aboutUs {
+  padding-top: 100px;
+  padding-bottom: 96px; }
+  .aboutUs .about_title_description {
+    width: 69%;
+    position: relative;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 18px; }
+    .aboutUs .about_title_description .about_title {
+      color: #111111;
+      font-family: 'Playfair Display';
+      font-size: 31px;
+      line-height: 21px;
+      font-weight: 400;
+      letter-spacing: 1.24px; }
+    .aboutUs .about_title_description .about_description {
+      padding-top: 29px;
+      color: #666666;
+      font-family: 'Playfair Display';
+      font-size: 21px;
+      line-height: 27px;
+      font-weight: 400;
+      letter-spacing: 0.84px; }
+    .aboutUs .about_title_description .about_number_back {
+      position: absolute;
+      top: -58px;
+      left: 0;
+      opacity: 0.1;
+      color: #111111;
+      font-family: 'Open Sans';
+      font-size: 195px;
+      line-height: 200px;
+      font-weight: 400;
+      letter-spacing: 0.56px; }
+  .aboutUs .about_history_expertise {
+    width: 95.6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 70px; }
+    .aboutUs .about_history_expertise .about_history {
+      width: 51.5%; }
+      .aboutUs .about_history_expertise .about_history .history_title {
+        color: #111111;
+        font-family: 'Playfair Display';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0.84px; }
+      .aboutUs .about_history_expertise .about_history .history_content .date_rows {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 32px; }
+        .aboutUs .about_history_expertise .about_history .history_content .date_rows .history_date {
+          width: 13.5%;
+          color: #111111;
+          font-family: 'Open Sans';
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 21px;
+          letter-spacing: 0.84px; }
+        .aboutUs .about_history_expertise .about_history .history_content .date_rows .history_text {
+          width: 80.5%;
+          color: #111111;
+          font-family: 'Open Sans';
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0.64px; }
+    .aboutUs .about_history_expertise .about_expertise {
+      width: 44.9%; }
+      .aboutUs .about_history_expertise .about_expertise .expertise_title {
+        color: #111111;
+        font-family: 'Playfair Display';
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.84px; }
+      .aboutUs .about_history_expertise .about_expertise .expertise_text {
+        padding-top: 36px;
+        color: #666666;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.56px; }
