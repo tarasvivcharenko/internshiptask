@@ -27,3 +27,10 @@ $(document).ready(function(){
         ]
     });
 });
+$(".rows_faq_block").click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+});
+// $(".fas").click(function () {
+//     $(this).toggleClass("change_icon");
+// });
