@@ -1148,6 +1148,7 @@
         .name_form, .email_form, .phone_form, .message_form{
           width: 100%;
           border: none;
+          outline:none;
           border-bottom: 2px solid rgba(51, 51, 51, 0.2);
           margin-bottom: 30px;
           padding-bottom: 5px;
@@ -1172,6 +1173,7 @@
         }
         .button_form{
           border: none;
+          outline: none;
           border-radius: 25px;
           background-color: #e8bf5d;
           padding: 17px 32px;

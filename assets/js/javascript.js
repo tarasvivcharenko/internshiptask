@@ -31,6 +31,11 @@ $(".rows_faq_block").click(function(e) {
     e.preventDefault();
     $(this).toggleClass('active');
 });
-// $(".fas").click(function () {
-//     $(this).toggleClass("change_icon");
-// });
+$(document).ready(function () {
+    $(".item_link").click(function () {
+        $("#menu_modal").modal('hide');
+        let id = $(this).attr('href');
+        let top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 1000);
+    });
+});
