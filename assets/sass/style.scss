@@ -1,11 +1,14 @@
+@import "mixin";
 .header{
   .header_container{
-    padding: 0;
     height: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include mobile{
+      height: 60px;
+    }
     .header_logo{
       font-family: 'Playfair Display';
       font-size: 25px;
@@ -20,15 +23,58 @@
     }
     .button_modal{
       display: none;
+      @include mobile_horizon{
+        display: block;
+        .fas{
+          font-size: 20px;
+        }
+      }
+      @include mobile{
+        display: block;
+        .fas{
+          font-size: 20px;
+        }
+      }
+    }
+    .modal{
+      .modal-content{
+        background-color: #ffffff;
+        .close{
+          margin: 10px 0 0 0;
+        }
+        .header_menu_mobile{
+          padding-left: 0;
+          .menu_item {
+            list-style: none;
+            text-align: center;
+            font-family: 'Open Sans';
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 45px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding-bottom: 10px;
+            .item_link {
+              text-decoration: none;
+              color: #111111;
+            }
+          }
+        }
+      }
     }
     .header_menu{
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-      width: 75%;
       padding-left: 0;
       margin-bottom: 0;
+      @include mobile_horizon{
+        display: none;
+      }
+      @include mobile{
+        display: none;
+      }
       .menu_item{
         list-style: none;
         font-family: 'Open Sans';
@@ -41,6 +87,9 @@
           text-decoration: none;
           color: #111111;
           padding: 0 11px 14px 11px;
+          @include tablet{
+            padding: 0 7px;
+          }
           &:hover{
             border-bottom: 5px solid #e8bf5d;
           }
@@ -58,6 +107,23 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include tablet{
+      width: 100%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @include mobile{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .hero_name_position{
       padding-left: 16px;
       border-left: 2px solid #e8bf5d;
@@ -67,7 +133,7 @@
         font-size: 65px;
         font-weight: 400;
         letter-spacing: 2.6px;
-        line-height: 45px;
+        line-height: 55px;
         padding-bottom: 13px;
       }
       .hero_position{
@@ -79,7 +145,12 @@
       }
     }
     .hero_bottom{
-
+      @include mobile_horizon{
+        padding-top: 50px;
+      }
+      @include mobile{
+        padding-top: 50px;
+      }
       .bottom_link{
         background-color: #e8bf5d;
         border-radius: 25px;
@@ -98,11 +169,24 @@
 .aboutUs {
   padding-top: 100px;
   padding-bottom: 96px;
+  @include mobile{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .about_heading {
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .about_title {
       color: #111111;
       font-family: 'Playfair Display';
@@ -139,8 +223,33 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 70px;
+    @include tablet{
+      width: 100%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+    }
+    @include mobile{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+    }
     .about_history{
       width: 51.5%;
+      @include mobile_horizon{
+        width: 100%;
+      }
+      @include mobile{
+        width: 100%;
+      }
       .history_title{
         color: #111111;
         font-family: 'Playfair Display';
@@ -156,13 +265,15 @@
           justify-content: space-between;
           padding-top: 32px;
           .history_date{
-            width: 13.5%;
             color: #111111;
             font-family: 'Open Sans';
             font-size: 21px;
             font-weight: 700;
             line-height: 21px;
             letter-spacing: 0.84px;
+            @include mobile_xs{
+              font-size: 17px;
+            }
           }
           .history_text{
             width: 80.5%;
@@ -178,6 +289,12 @@
     }
     .about_expertise{
       width: 44.9%;
+      @include mobile_horizon{
+        width: 100%;
+      }
+      @include mobile{
+        width: 100%;
+      }
       .expertise_title{
         color: #111111;
         font-family: 'Playfair Display';
@@ -185,6 +302,12 @@
         font-weight: 400;
         line-height: 22px;
         letter-spacing: 0.84px;
+        @include mobile_horizon{
+          padding-top: 30px;
+        }
+        @include mobile{
+          padding-top: 30px;
+        }
       }
       .expertise_text{
         padding-top: 36px;
@@ -202,11 +325,24 @@
   background-color: #111111;
   padding-top: 100px;
   padding-bottom: 24px;
+  @include mobile{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .practis_heading{
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .practis_title{
       color: #ffffff;
       font-family: 'Playfair Display';
@@ -245,12 +381,26 @@
     justify-content: space-between;
     padding-top: 100px;
     margin-left: 110px;
+    @include mobile_horizon{
+      width: 100%;
+      margin-left: 0;
+    }
+    @include mobile{
+      width: 100%;
+      margin-left: 0;
+    }
     .practis_block{
       width: 44.8%;
       display: flex;
       flex-direction: row;
       justify-content: start;
       padding-bottom: 72px;
+      @include mobile_horizon{
+        width: 48%;
+      }
+      @include mobile{
+        width: 100%;
+      }
       .practis_icon{
         padding-right: 29px;
         color: #e8bf5d;
@@ -287,16 +437,34 @@
 }
 .meetOur{
   padding: 100px 0;
+  @include tablet{
+    padding-bottom: 50px;
+  }
+  @include mobile_horizon{
+    padding-bottom: 50px;
+  }
+  @include mobile{
+    padding: 100px 10px 50px 10px;
+  }
   .meetOur_heading {
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .meetOur_title {
       color: #111111;
       font-family: 'Playfair Display';
       font-size: 31px;
-      line-height: 21px;
+      line-height: 24px;
       font-weight: 400;
       letter-spacing: 1.24px;
     }
@@ -328,11 +496,29 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 70px;
+    @include tablet{
+      justify-content: space-around;
+    }
+    @include mobile{
+      justify-content: center;
+    }
     .meetOur_block{
       width: 23.7%;
       display: flex;
       flex-direction: column;
       justify-content: start;
+      @include tablet{
+        width: 40%;
+        padding-bottom: 25px;
+      }
+      @include mobile_horizon{
+        width: 48%;
+        padding-bottom: 25px;
+      }
+      @include mobile{
+        width: 90%;
+        padding-bottom: 25px;
+      }
       .meetOur_photo{
         height: 300px;
       }
@@ -359,11 +545,29 @@
 }
 .ourClient{
   padding: 100px 0;
+  @include tablet{
+    padding-bottom: 50px;
+  }
+  @include mobile_horizon{
+    padding-bottom: 50px;
+  }
+  @include mobile{
+    padding: 100px 10px 50px 10px;
+  }
   .ourClient_heading{
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .ourClient_title{
       color: #ffffff;
       font-family: 'Playfair Display';
@@ -396,6 +600,15 @@
   }
   .slider-content{
     width: 93.7%;
+    @include tablet{
+      width: 100%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .slick-dots{
       width: 95%;
       li{
@@ -434,12 +647,31 @@
     }
     .ourClient_content{
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       padding-top: 95px;
+      @include mobile_horizon{
+        flex-direction: column;
+        justify-content: center;
+      }
+      @include mobile{
+        flex-direction: column;
+        justify-content: center;
+      }
       .ourClient_block_left{
         width: 36.5%;
+        height: 325px;
         position: relative;
+        @include tablet{
+          width: 40%;
+        }
+        @include mobile_horizon{
+          width: 85%;
+        }
+        @include mobile{
+          width: 85%;
+        }
         .ourClient_photo{
           position: absolute;
           top: -20px;
@@ -461,6 +693,17 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @include tablet{
+          width: 50%;
+        }
+        @include mobile_horizon{
+          width: 95%;
+          padding-top: 30px;
+        }
+        @include mobile{
+          width: 90%;
+          padding-top: 30px;
+        }
         .ourClient_icon_comment{
           opacity: 0.25;
           color: #ffffff;
@@ -506,16 +749,34 @@
 }
 .publication{
   padding: 100px 0;
+  @include tablet{
+    padding-bottom: 50px;
+  }
+  @include mobile_horizon{
+    padding-bottom: 50px;
+  }
+  @include mobile{
+    padding: 100px 10px 50px 10px;
+  }
   .publication_heading {
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .publication_title {
       color: #111111;
       font-family: 'Playfair Display';
       font-size: 31px;
-      line-height: 21px;
+      line-height: 26px;
       font-weight: 400;
       letter-spacing: 1.24px;
     }
@@ -544,12 +805,27 @@
   .publication_content{
     padding-top: 70px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    @include mobile_horizon{
+      justify-content: center;
+    }
+    @include mobile{
+      justify-content: center;
+    }
     .publication_block{
       width: 31.5%;
       padding-bottom: 25px;
       border-bottom: 3px solid #e8bf5d;
+      @include mobile_horizon{
+        width: 95%;
+        margin-bottom: 25px;
+      }
+      @include mobile{
+        width: 95%;
+        margin-bottom: 25px;
+      }
       .publication_block_photo{
         padding-bottom: 30px;
         img{
@@ -577,6 +853,9 @@
           font-weight: 400;
           line-height: 24px;
           letter-spacing: 0.64px;
+          @include tablet{
+            font-size: 14px;
+          }
         }
         .publication_block_info_author{
           color: #111111;
@@ -585,6 +864,9 @@
           font-weight: 400;
           line-height: 24px;
           letter-spacing: 0.64px;
+          @include tablet{
+            font-size: 14px;
+          }
         }
       }
       .publication_block_text{
@@ -624,11 +906,26 @@
   background-color: #111111;
   padding-top: 100px;
   padding-bottom: 165px;
+  @include mobile_horizon{
+    padding-bottom: 75px;
+  }
+  @include mobile{
+    padding: 100px 10px 75px 10px;
+  }
   .faq_heading{
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .faq_title{
       color: #ffffff;
       font-family: 'Playfair Display';
@@ -662,12 +959,30 @@
   .faq_content{
     width: 96.5%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-top: 95px;
+    @include tablet{
+      width: 100%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .faq_block_left{
       width: 51.5%;
+      @include mobile_horizon{
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      @include mobile{
+        width: 100%;
+        margin-bottom: 25px;
+      }
       .rows_faq_block{
         display: flex;
         flex-direction: row;
@@ -727,17 +1042,40 @@
       font-weight: 400;
       line-height: 28px;
       letter-spacing: 0.56px;
+      @include tablet{
+        padding: 35px 35px 35px 35px;
+      }
+      @include mobile_horizon{
+        width: 100%;
+        padding: 35px 35px 35px 35px;
+      }
+      @include mobile{
+        width: 100%;
+        padding: 35px 35px 35px 35px;
+      }
     }
   }
 }
 .contact{
   padding-top: 100px;
   padding-bottom: 75px;
+  @include mobile{
+    padding: 100px 10px 75px 10px;
+  }
   .contact_heading {
     width: 69%;
     position: relative;
     border-left: 2px solid #e8bf5d;
     padding-left: 18px;
+    @include tablet{
+      width: 80%;
+    }
+    @include mobile_horizon{
+      width: 100%;
+    }
+    @include mobile{
+      width: 100%;
+    }
     .contact_title {
       color: #111111;
       font-family: 'Playfair Display';
@@ -776,11 +1114,35 @@
     border-radius: 3px;
     background-color: #ffffff;
     display: flex;
+    flex-wrap: wrap-reverse;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    @include tablet{
+      width: 100%;
+      height: 470px;
+    }
+    @include mobile_horizon{
+      width: 95%;
+      height: 800px;
+    }
+    @include mobile{
+      width: 95%;
+      height: 800px;
+    }
     .contact_block_left{
       width: 40.35%;
+      @include tablet{
+        width: 45%;
+      }
+      @include mobile_horizon{
+        width: 90%;
+        padding-bottom: 25px;
+      }
+      @include mobile{
+        width: 95%;
+        padding-bottom: 25px;
+      }
       .contact_form{
         padding-top: 15px;
         .name_form, .email_form, .phone_form, .message_form{
@@ -823,13 +1185,24 @@
       }
     }
     .contact_block_right{
-      width: 41.7%;
+      width: 42%;
       height: 100%;
       position: relative;
+      @include tablet{
+        width: 45%;
+      }
+      @include mobile_horizon{
+        width: 85%;
+        height: 57%;
+      }
+      @include mobile{
+        width: 85%;
+        height: 55%;
+      }
       .contact_map{
         position: absolute;
-        top: 52px;
-        right: 36px;
+        top: 50px;
+        right: 0;
         height: 363px;
         width: 100%;
         z-index: 1;
@@ -837,7 +1210,7 @@
       .contact_map_back{
         position: absolute;
         top: 75px;
-        right: 60px;
+        right: 25px;
         height: 363px;
         width: 100%;
       }
@@ -853,17 +1226,27 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include mobile{
+    width: 100%;
+    }
     .copyright{
       color: #b5b5b5;
       font-family: 'Open Sans';
       font-size: 16px;
       font-weight: 400;
       line-height: 20px;
+      @include mobile_xs{
+        width: 50%;
+      }
     }
     .social{
       font-size: 16px;
       font-weight: 400;
       line-height: 20px;
+      @include mobile_xs{
+        width: 50%;
+        text-align: end;
+      }
       .social_link{
         padding: 0 5px;
         color: #fbfbfb;
